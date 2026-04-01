@@ -1,1 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pulse Loop</title>
+  <style>
+    :root {
+      --bg-1: #07111f;
+      --bg-2: #0d1b2f;
+      --panel: rgba(18, 29, 48, 0.82);
+      --panel-border: rgba(255, 214, 102, 0.18);
+      --text: #f5f7fb;
+      --muted: #b9c3d6;
+      --gold: #ffd666;
+      --gold-2: #ffbf47;
+      --accent: #6ee7ff;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+    }
 
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, rgba(110, 231, 255, 0.14), transparent 30%),
+        radial-gradient(circle at 80% 20%, rgba(255, 214, 102, 0.12), transparent 22%),
+        linear-gradient(180deg, var(--bg-2), var(--bg-1));
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 28px 0 18px;
+    }
+
+    .logo {
+      font-size: 40px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: var(--gold);
+      text-shadow: 0 0 18px rgba(255, 214, 102, 0.28);
+      margin: 0 0 10px;
+    }
+
+    .subtitle {
+      margin: 0 auto;
+      max-width: 720px;
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 34px;
+    }
+
+    .card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      border-radius: 20px;
+      padding: 22px 20px;
+      box-shadow: var(--shadow);
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+      backdrop-filter: blur(8px);
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(255, 214, 102, 0.5);
+      background: rgba(24, 37, 60, 0.9);
+    }
+
+    .flag {
+      font-size: 30px;
+      line-height: 1;
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .lang {
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .meta {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .section {
+      margin-top: 30px;
+      background: var(--panel);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+    }
+
+    .section h2 {
+      margin: 0 0 14px;
+      font-size: 22px;
+      color: var(--gold);
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      color: #07111f;
+      background: linear-gradient(180deg, var(--gold), var(--gold-2));
+      padding: 12px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+      box-shadow: 0 8px 24px rgba(255, 191, 71, 0.28);
+    }
+
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 28px;
+      opacity: 0.9;
+    }
+
+    @media (max-width: 640px) {
+      .wrap {
+        padding: 20px 14px 40px;
+      }
+
+      .logo {
+        font-size: 32px;
+      }
+
+      .subtitle {
+        font-size: 15px;
+      }
+
+      .section {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <h1 class="logo">PULSE LOOP</h1>
+      <p class="subtitle">
+        Official support and privacy pages. Select your language below.
+      </p>
+    </header>
+
+    <section class="grid">
+      <a class="card" href="./support/en/index.html">
+        <span class="flag">🇺🇸</span>
+        <div class="lang">English</div>
+        <div class="meta">Support page and contact information</div>
+      </a>
+
+      <a class="card" href="./support/es/index.html">
+        <span class="flag">🇪🇸</span>
+        <div class="lang">Español</div>
+        <div class="meta">Soporte y datos de contacto</div>
+      </a>
+
+      <a class="card" href="./support/fr/index.html">
+        <span class="flag">🇫🇷</span>
+        <div class="lang">Français</div>
+        <div class="meta">Assistance et informations de contact</div>
+      </a>
+
+      <a class="card" href="./support/it/index.html">
+        <span class="flag">🇮🇹</span>
+        <div class="lang">Italiano</div>
+        <div class="meta">Supporto e informazioni di contatto</div>
+      </a>
+
+      <a class="card" href="./support/de/index.html">
+        <span class="flag">🇩🇪</span>
+        <div class="lang">Deutsch</div>
+        <div class="meta">Support und Kontaktinformationen</div>
+      </a>
+
+      <a class="card" href="./support/pt/index.html">
+        <span class="flag">🇧🇷</span>
+        <div class="lang">Português (Brasil)</div>
+        <div class="meta">Suporte e informações de contato</div>
+      </a>
+
+      <a class="card" href="./support/ja/index.html">
+        <span class="flag">🇯🇵</span>
+        <div class="lang">日本語</div>
+        <div class="meta">サポートとお問い合わせ先</div>
+      </a>
+
+      <a class="card" href="./support/ko/index.html">
+        <span class="flag">🇰🇷</span>
+        <div class="lang">한국어</div>
+        <div class="meta">지원 및 문의 정보</div>
+      </a>
+    </section>
+
+    <section class="section">
+      <h2>Privacy Policy</h2>
+      <p>Select your preferred language for the Pulse Loop privacy policy.</p>
+      <div class="links">
+        <a class="button" href="./privacy/en/index.html">English</a>
+        <a class="button" href="./privacy/es/index.html">Español</a>
+        <a class="button" href="./privacy/fr/index.html">Français</a>
+        <a class="button" href="./privacy/it/index.html">Italiano</a>
+        <a class="button" href="./privacy/de/index.html">Deutsch</a>
+        <a class="button" href="./privacy/pt/index.html">Português</a>
+        <a class="button" href="./privacy/ja/index.html">日本語</a>
+        <a class="button" href="./privacy/ko/index.html">한국어</a>
+      </div>
+    </section>
+
+    <p class="footer">© 2026 Pulse Loop</p>
+  </main>
+</body>
+</html>
