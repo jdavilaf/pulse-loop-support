@@ -1,0 +1,38 @@
+/* JD Apps support extensions; shared privacy design remains unchanged. */
+:root{--border:var(--stroke);--cyan:var(--accent);--mint:var(--accent)}
+.jd-header .jd-links{margin:0;font-size:.91rem;justify-content:flex-start;min-height:0}
+.jd-header .jd-logo{color:#fff}
+.skip{position:absolute;left:12px;top:-100px;background:var(--accent);color:var(--bg);padding:12px;z-index:10}
+.skip:focus{top:12px}
+.jd-support .hero{margin-bottom:28px}
+.jd-support .intro{font-size:1.1rem;color:var(--muted)}
+.jd-support .button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border-radius:12px;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:750}
+.jd-support .button.secondary{background:transparent;color:var(--accent);border:1px solid var(--stroke)}
+.jd-support .actions{display:flex;flex-wrap:wrap;gap:12px}
+.jd-support .topics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:24px 0}
+.jd-support .topic{display:block;border:1px solid var(--stroke);background:var(--panel);padding:20px;border-radius:16px;text-decoration:none;color:var(--text)}
+.jd-support .topic small{display:block;color:var(--accent)}
+.jd-support .note{border-left:3px solid var(--accent);padding:14px 18px;background:var(--panel);color:var(--muted)}
+.jd-support .content{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:24px;align-items:start}
+.jd-support .faq,.jd-support .contact,.jd-support .panel{background:var(--panel);border:1px solid var(--stroke);border-radius:16px;padding:24px;min-width:0}
+.jd-support .contact{position:static}
+.jd-support .faq>h2,.jd-support .contact>h2{margin-top:0}
+.jd-support h3{color:var(--accent)}
+.jd-support details{border-bottom:1px solid var(--stroke);padding:16px 0}
+.jd-support details:last-child{border-bottom:0}
+.jd-support summary{cursor:pointer;font-weight:650;line-height:1.5;min-height:24px}
+.jd-support summary:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+.jd-support details p{margin:14px 0 0}
+.jd-support .email{display:block;margin:18px 0}
+.jd-support .links{display:flex;flex-direction:column;gap:14px;margin-top:24px}
+.jd-support .meta{margin-top:22px}
+.jd-support footer{border-top:1px solid var(--stroke);margin-top:32px;padding-top:20px}
+.jd-support ul{padding-left:22px}
+.jd-support .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:16px;margin-top:28px}
+.jd-support .card{display:block;background:var(--panel);border:1px solid var(--stroke);border-radius:16px;padding:22px;text-decoration:none}
+.jd-support .card strong{display:block;color:var(--text);font-size:1.1rem}
+.jd-support .card span{display:block;color:var(--muted)}
+.jd-support .hub-title{margin-bottom:22px}
+@media(max-width:850px){.jd-support .content{grid-template-columns:1fr}}
+@media(max-width:550px){.jd-support .topics{grid-template-columns:1fr}.jd-support .faq,.jd-support .contact,.jd-support .panel{padding:18px}}
+@media(prefers-reduced-motion:reduce){.jd-support *{scroll-behavior:auto}}
